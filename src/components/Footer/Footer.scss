@@ -6,24 +6,14 @@
 .footer {
 	min-height: 840px;
 	position: relative;
+	background: url("../../assets/svg/footer-curve-mobile.svg") no-repeat;
+	background-size: cover;
 	@include flex(center, center);
 	color: $white;
 
 	//container
 	.container {
 		padding: 100px 0;
-	}
-
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: url("../../assets/svg/footer-curve-mobile.svg") no-repeat;
-		background-size: cover;
-		z-index: -1;
 	}
 
 	//newsletter
@@ -52,7 +42,7 @@
 
 			.form__input {
 				input {
-					width: 100%;
+					min-width: 100%;
 					margin-bottom: 16px;
 				}
 
@@ -120,7 +110,7 @@
 				height: 23px;
 
 				&:hover {
-					filter: invert(62%) sepia(71%) saturate(2789%) hue-rotate(152deg) brightness(99%) contrast(105%);
+					filter: invert(58%) sepia(83%) saturate(1128%) hue-rotate(149deg) brightness(95%) contrast(107%);
 				}
 			}
 		}
@@ -153,9 +143,12 @@
 @include lg {
 	//footer
 	.footer {
+		background: url("../../assets/svg/footer-curve-desktop.svg") no-repeat;
+		background-size: cover;
 		min-height: 720px;
 
 		.container {
+			width: 100%;
 			padding: 0;
 			position: relative;
 			top: 80px;
@@ -164,6 +157,7 @@
 
 			//newsletter
 			.footer__newsletter {
+				justify-self: flex-end;
 				grid-column: 2;
 			}
 
@@ -171,11 +165,6 @@
 			.footer__info {
 				grid-row: 1;
 			}
-		}
-
-		&::before {
-			background: url("../../assets/svg/footer-curve-desktop.svg") no-repeat;
-			background-size: cover;
 		}
 
 		//newsletter
@@ -192,13 +181,6 @@
 			//text
 			&-text {
 				margin-bottom: 40px;
-			}
-
-			//form
-			&-form {
-				input {
-					margin-bottom: 0;
-				}
 			}
 		}
 
@@ -225,34 +207,6 @@
 				li a img {
 					width: 32px;
 					height: 32px;
-				}
-			}
-		}
-	}
-}
-
-@include xl {
-	//footer
-	.footer {
-		.container {
-			grid-template-columns: 340px 520px;
-			grid-gap: 200px;
-		}
-
-		//newsletter
-		&__newsletter {
-			//form
-			&-form {
-				max-width: 320px;
-				flex-wrap: nowrap;
-				gap: 20px;
-
-				input {
-					margin-bottom: 0;
-				}
-
-				.btn {
-					align-self: flex-start;
 				}
 			}
 		}

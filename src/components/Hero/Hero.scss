@@ -88,9 +88,11 @@
 
 		//stats
 		&__stats {
-			@include flex(center, center);
+			max-width: 880px;
+			margin: 0 auto;
+			@include flex(space-between, center);
 			flex-direction: row;
-			gap: 341px;
+			gap: 0;
 
 			//img
 			img {
