@@ -1,0 +1,38 @@
+@import "../../scss/mixins";
+@import "../../scss/layout";
+@import "../../scss/components";
+
+//header
+.header {
+	margin-bottom: 180px;
+
+	//nav
+	&__nav {
+		padding: 24px 0 112px;
+		@include flex(space-between, center);
+
+		//logo
+		&-logo {
+			width: 96px;
+			height: 16px;
+		}
+	}
+}
+
+@include lg {
+	//header
+	.header {
+		margin-bottom: 300px;
+
+		//nav
+		&__nav {
+			padding: 78px 0 225px;
+
+			//logo
+			&-logo {
+				width: 240px;
+				height: 38px;
+			}
+		}
+	}
+}

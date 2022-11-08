@@ -1,0 +1,98 @@
+@import "../scss/variables";
+@import "../scss/functions";
+
+//btn
+.btn {
+	font-family: $openSans;
+	@include flex(center, center);
+
+	//try free
+	&.try-free {
+		min-width: rem(80);
+		min-height: rem(24);
+		font-size: rem(10);
+		font-weight: 400;
+		line-height: rem(13);
+		color: $pink;
+		border: 1px solid $pink;
+		border-radius: rem(12);
+		box-shadow: 0px 0px 5px 0px #ff52c138;
+		transition: all 0.3s ease;
+
+		&:hover {
+			border: 1px solid $lightPink;
+			color: $lightPink;
+		}
+	}
+
+	//get started, subscribe
+	&.get-started,
+	&.subscribe {
+		font-weight: 700;
+		color: $white;
+		background-color: $pink;
+		transition: background-color 0.3s ease;
+
+		&:hover {
+			background-color: $lightPink;
+		}
+	}
+
+	//get started
+	&.get-started {
+		max-width: rem(200);
+		margin: 0 auto;
+		min-height: rem(40);
+		font-size: rem(12);
+		line-height: rem(18);
+		border-radius: rem(20);
+		box-shadow: 0px 3px 7px 0px #00252e39;
+	}
+
+	//subscribe
+	&.subscribe {
+		max-width: rem(160);
+		min-height: rem(48);
+		border-radius: rem(5);
+	}
+}
+
+//form input
+input {
+	max-width: rem(320);
+	min-height: rem(48);
+	padding-left: 16px;
+	border: none;
+	outline: none;
+	color: $darkCyan;
+	border-radius: rem(6);
+}
+
+@include lg {
+	//btn
+	.btn {
+		//try free
+		&.try-free {
+			min-width: rem(136);
+			min-height: rem(40);
+			font-size: rem(16);
+			line-height: rem(22);
+			border-radius: rem(20);
+		}
+
+		//get started
+		&.get-started {
+			min-width: rem(400);
+			min-height: rem(80);
+			font-size: rem(20);
+			line-height: rem(30);
+			border-radius: rem(40);
+			transition: background-color 0.3s ease;
+		}
+
+		//subscribe
+		&.subscribe {
+			min-width: rem(160);
+		}
+	}
+}

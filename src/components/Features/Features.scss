@@ -1,0 +1,165 @@
+@import "../../scss/mixins";
+
+//features
+.features {
+	margin-bottom: 50px;
+	text-align: center;
+
+	//feature
+	.feature {
+		position: relative;
+		@include flex(center, center);
+
+		//img
+		&__img {
+			width: 200px;
+			height: 200px;
+			margin-bottom: 40px;
+		}
+
+		//content
+		&__content {
+			//title
+			&-title {
+				margin-bottom: 16px;
+			}
+
+			//text
+			&-text {
+				max-width: 320px;
+				margin: 0 auto;
+			}
+		}
+
+		//First feature
+		&:first-child {
+			min-height: 763px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url("../../assets/svg/grow-together-curve-mobile.svg") no-repeat;
+				background-size: 100% 100%;
+				z-index: -1;
+			}
+		}
+
+		//2nd feature
+		&:nth-child(2) {
+			margin: 67px 0 120px;
+		}
+
+		//Third feature
+		&:last-child {
+			min-height: 803px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url("../../assets/svg/your-users-curve-mobile.svg") no-repeat;
+				background-size: 100% 100%;
+				z-index: -1;
+			}
+		}
+	}
+}
+
+@include x-sm {
+	//features
+	.features {
+		//feature
+		.feature {
+			//img
+			&__img {
+				width: 280px;
+				height: 280px;
+			}
+		}
+	}
+}
+
+@include md {
+	//features
+	.features {
+		margin-bottom: 180px;
+		text-align: left;
+
+		//feature
+		.feature {
+			//feature inner
+			.container {
+				display: grid;
+				grid-gap: 100px;
+				grid-template-columns: repeat(2, 1fr);
+				place-items: center;
+			}
+
+			//img
+			&__img {
+				width: 100%;
+				height: 100%;
+				margin-bottom: 0;
+			}
+
+			//content
+			&__content {
+				//title
+				&-title {
+					margin-bottom: 26px;
+				}
+
+				//text
+				&-text {
+					max-width: 520px;
+					margin: 0;
+				}
+			}
+
+			//First, third feature
+			&:first-child,
+			&:last-child {
+				min-height: 850px;
+
+				.container {
+					//img
+					img {
+						grid-column: 2;
+					}
+
+					//content
+					.feature__content {
+						grid-row: 1;
+					}
+				}
+
+				&::before {
+					background: url("../../assets/svg/grow-together-curve-desktop.svg") no-repeat;
+					background-size: cover;
+				}
+			}
+
+			//2nd feature
+			&:nth-child(2) {
+				margin: 200px 0 115px;
+			}
+
+			//Third feature
+			&:last-child {
+				min-height: 803px;
+
+				&::before {
+					background: url("../../assets/svg/your-users-curve-desktop.svg") no-repeat;
+					background-size: cover;
+				}
+			}
+		}
+	}
+}

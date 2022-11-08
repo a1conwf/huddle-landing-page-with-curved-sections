@@ -1,0 +1,134 @@
+@import "../../scss/mixins";
+@import "../../scss/functions";
+@import "../../scss/variables";
+
+//hero
+.hero {
+	text-align: center;
+
+	//content
+	&__content {
+		margin-bottom: 120px;
+
+		//content info
+		&-info {
+			margin-bottom: 104px;
+
+			//title
+			&-title {
+				margin-bottom: 24px;
+			}
+
+			//text
+			&-text {
+				max-width: 400px;
+				margin: 0 auto;
+				margin-bottom: 48px;
+			}
+		}
+
+		//content img
+		&-img {
+			width: 100%;
+		}
+	}
+
+	//stats
+	&__stats {
+		@include flex(center, center);
+		flex-direction: column;
+		gap: 88px;
+
+		//img
+		img {
+			display: block;
+			width: 30px;
+			height: 30px;
+		}
+
+		//quantity
+		.qty {
+			font-size: rem(61);
+			font-weight: 700;
+			line-height: rem(91);
+		}
+
+		//text
+		.text {
+			font-size: rem(15);
+			line-height: rem(23);
+			color: $grayishBlue;
+		}
+	}
+}
+
+@include lg {
+	//hero
+	.hero {
+		//content
+		&__content {
+			//content info
+			&-info {
+				margin-bottom: 120px;
+
+				//title
+				&-title {
+					margin-bottom: 26px;
+				}
+
+				//text
+				&-text {
+					max-width: 600px;
+					margin-bottom: 50px;
+					font-size: rem(20);
+					line-height: rem(30);
+				}
+			}
+		}
+
+		//stats
+		&__stats {
+			@include flex(center, center);
+			flex-direction: row;
+			gap: 341px;
+
+			//img
+			img {
+				width: 56px;
+				height: 56px;
+			}
+
+			//quantity
+			.qty {
+				font-size: rem(61);
+				line-height: rem(91);
+			}
+
+			//text
+			.text {
+				font-size: rem(15);
+				line-height: rem(23);
+			}
+		}
+	}
+}
+
+@include xl {
+	//hero
+	.hero {
+		//stats
+		&__stats {
+			//quantity
+			.qty {
+				font-size: rem(96);
+				line-height: rem(144);
+			}
+
+			//text
+			.text {
+				font-size: rem(24);
+				line-height: rem(36);
+			}
+		}
+	}
+}

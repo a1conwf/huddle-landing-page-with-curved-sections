@@ -1,0 +1,19 @@
+@import "../../scss/mixins";
+
+//cta
+.cta {
+	margin-bottom: 250px;
+	text-align: center;
+
+	//title
+	&__title {
+		margin-bottom: 40px;
+	}
+}
+
+@include md {
+	//cta
+	.cta {
+		margin-bottom: 180px;
+	}
+}
