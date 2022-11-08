@@ -51,11 +51,11 @@ const Footer = () => {
 						<li className="footer__info-list-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.</li>
 						<li className="footer__info-list-item">
 							<img src={iconPhone} alt="icon-phone" />
-							<a href="tel: +1-543-123-4567">Phone: +1-543-123-4567</a>
+							<a href="tel:+1-543-123-4567">Phone: +1-543-123-4567</a>
 						</li>
 						<li className="footer__info-list-item">
 							<img src={iconEmail} alt="icon-email" />
-							<a href="mailto: example@company.com">example@company.com</a>
+							<a href="mailto:example@company.com">example@company.com</a>
 						</li>
 					</ul>
 
